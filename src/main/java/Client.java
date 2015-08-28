@@ -31,7 +31,7 @@ public class Client {
       return false;
     } else {
       Client newClient = (Client) otherClient;
-      return this.getClientName().equals(newClient.getClientName()) &&
+      return this.getName().equals(newClient.getName()) &&
               this.getId() == newClient.getId();
     }
   }
