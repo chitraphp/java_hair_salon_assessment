@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-6" id="stylists" name="stylists" float="left">
+  #if($stylists.size() > 0)
+      <table class="table">
+        <thead>
+          <th>stylists</th>
+        </thead>
+        <tbody>
+          #foreach ($stylist in $stylists)
+            <tr class="success">
+              <td>
+                <a href="/stylists/$stylist.getId()/clients">$stylist.getName()</a>
+               <!-- <a href="/stylists/$stylist.getId()/edit">Edit</a>  -->
+               </td>
+            </tr>
+          #end
+        </tbody>
+      </table>
+  #else
+    <div>
+      <h3>Oops! There are no stylists to view!</h3>
+    </div>
+  #end
+  </div>
+</div>
+<div>
+  <h3><a href="/stylists/new">Add Stylist</a></h3>
+</div>
+<div>
+  <h3><a href="/clients">All Clients</a></h3>
+</div>

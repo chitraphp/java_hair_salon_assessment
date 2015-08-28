@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-6" id="clients" name="clients" float="left">
+  #if($clients.size() > 0)
+      <table class="table">
+        <thead>
+          <th>clients</th>
+        </thead>
+        <tbody>
+          #foreach ($client in $clients)
+            <tr class="success">
+              <td>
+                <a href="/clients/$client.getId()/clients">$client.getName()</a>
+               </td>
+               <td>
+                 <a href="/clients/$client.getId()/edit">Edit</a>
+               </td>
+               <td>
+                 <a href="/clients/$client.getId()/delete">Delete</a>
+               </td>
+            </tr>
+          #end
+        </tbody>
+      </table>
+  #else
+    <div>
+      <h3>Oops! There are no clients to view!</h3>
+    </div>
+  #end
+  </div>
+</div>
+<div>
+  <h3><a href="/clients/new">Add client</a></h3>
+</div>
+<div>
+  <h3><a href="/clients">All Clients</a></h3>
+</div>
