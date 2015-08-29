@@ -9,7 +9,8 @@
           #foreach ($client in $clients)
             <tr class="success">
               <td>
-                <a href="/clients/$client.getId()/clients">$client.getName()</a>
+                <!-- <a href="/clients/$client.getId()/clients">$client.getName()</a> -->
+                $client.getName()
                </td>
                <td>
                  <a href="/clients/$client.getId()/edit">Edit</a>
